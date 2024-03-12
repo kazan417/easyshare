@@ -8,4 +8,5 @@
 
 Если не подключились попробовать отключить selinux командами и перезагрузить ПК
 sudo sed -i "s/SELINUX=enforcing/SELINUX=permissive/" /etc/selinux/config
+
 sudo setenforce 0
