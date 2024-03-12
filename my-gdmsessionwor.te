@@ -1,0 +1,14 @@
+
+module my-gdmsessionwor 1.0;
+
+require {
+	type xdm_t;
+	type mnt_t;
+	type mount_var_run_t;
+	class file write;
+	class dir { add_name create remove_name rmdir setattr write };
+}
+
+#============= xdm_t ==============
+allow xdm_t mnt_t:dir { add_name create remove_name rmdir setattr write };
+allow xdm_t mount_var_run_t:file write;
